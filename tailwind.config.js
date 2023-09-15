@@ -9,6 +9,9 @@ export default {
                 white2: '#FAFCF3',
                 black2: '#353535',
             },
+            dropShadow: {
+                'upper': '0px 25px 25px rgba(0, 0, 0, 0.25)'
+              }
         },
     },
     plugins: [],
