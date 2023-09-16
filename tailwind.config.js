@@ -10,7 +10,8 @@ export default {
                 black2: '#353535',
             },
             dropShadow: {
-                'upper': '0px 25px 25px rgba(0, 0, 0, 0.25)'
+                'upper': '0px 28px 27px rgba(0, 0, 0, 0.25)',
+                'nav' : '0px 0px 5px rgba(0, 0, 0, 0.1)'
               }
         },
     },
