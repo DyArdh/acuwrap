@@ -8,6 +8,7 @@ export default {
                 second: '#B9D456',
                 white2: '#FAFCF3',
                 black2: '#353535',
+                halfgreen: '#FAFCF3',
             },
             dropShadow: {
                 'upper': '0px 28px 27px rgba(0, 0, 0, 0.25)',
