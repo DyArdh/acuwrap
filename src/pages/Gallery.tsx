@@ -1,121 +1,98 @@
-import Navbar from "../components/Navbar";
-import Footer from "../components/Footer";
-import pic1 from "../../public/galeri (1).png"
-import pic2 from "../../public/hero1.png"
+/* eslint-disable react-hooks/exhaustive-deps */
+import { useEffect, useState } from 'react';
 
-const Gallery = () => {
-  return (
-    <>
-      <Navbar bgColor={"white"} txtColor={"black"} />
+import Navbar from '../components/Navbar';
+import Footer from '../components/Footer';
+import ImageData from '../data/gallery_path.json';
 
-      <section className="container relative justify-center mx-auto mt-2 px-4 md:mt-20 lg:mt-24 lg:mb-40 lg:px-[125px]">
-        <div className="">
-          <h1 className="text-[45px] font-bold">Galeri Ocuwrap</h1>
-          <p className="text-lg mr-6">Foto produk, testimoni, dan kegiatan dari ocuwrap</p>
-        </div>
+const Gallery: React.FC = () => {
+    interface colsType {
+        name: string;
+        url: string;
+    }
 
-        <div className="grid grid-cols-2 mt-8 md:mt-12 lg:mt-16 md:grid-cols-4 gap-4">
-          <div className="grid gap-4">
-            <div>
-              <img
-                className="h-auto max-w-full rounded-lg"
-                src={pic1}
-                alt=""
-              />
-            </div>
-            <div>
-              <img
-                className="h-auto max-w-full rounded-lg"
-                src={pic1}
-                alt=""
-              />
-            </div>
-            <div>
-              <img
-                className="h-auto max-w-full rounded-lg"
-                src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-2.jpg"
-                alt=""
-              />
-            </div>
-          </div>
+    const [col1, setCol1] = useState<colsType[]>([]);
+    const [col2, setCol2] = useState<colsType[]>([]);
+    const [col3, setCol3] = useState<colsType[]>([]);
+    const [col4, setCol4] = useState<colsType[]>([]);
 
-          <div className="grid gap-4">
-            <div>
-              <img
-                className="h-auto max-w-full rounded-lg"
-                src={pic2}
-                alt=""
-              />
-            </div>
-            <div>
-              <img
-                className="h-auto max-w-full rounded-lg"
-                src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-4.jpg"
-                alt=""
-              />
-            </div>
-            <div>
-              <img
-                className="h-auto max-w-full rounded-lg"
-                src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-5.jpg"
-                alt=""
-              />
-            </div>
-          </div>
+    const generateCols = () => {
+        const col1: colsType[] = [];
+        const col2: colsType[] = [];
+        const col3: colsType[] = [];
+        const col4: colsType[] = [];
+        for (let i = 0; i < 4; i++) {
+            for (let j = 0; j < ImageData.length / 4; j++) {
+                if (i === 0) {
+                    col1.push(ImageData[j]);
+                } else if (i === 1) {
+                    col2.push(ImageData[j + ImageData.length / 4]);
+                } else if (i === 2) {
+                    col3.push(ImageData[j + (2 * ImageData.length) / 4]);
+                } else if (i === 3) {
+                    col4.push(ImageData[j + (3 * ImageData.length) / 4]);
+                }
+            }
+        }
 
-          <div className="grid gap-4">
-            <div>
-              <img
-                className="h-auto max-w-full rounded-lg"
-                src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-6.jpg"
-                alt=""
-              />
-            </div>
-            <div>
-              <img
-                className="h-auto max-w-full rounded-lg"
-                src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-7.jpg"
-                alt=""
-              />
-            </div>
-            <div>
-              <img
-                className="h-auto max-w-full rounded-lg"
-                src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-8.jpg"
-                alt=""
-              />
-            </div>
-          </div>
+        setCol1(col1);
+        setCol2(col2);
+        setCol3(col3);
+        setCol4(col4);
+    };
 
-          <div className="grid gap-4">
-            <div>
-              <img
-                className="h-auto max-w-full rounded-lg"
-                src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-9.jpg"
-                alt=""
-              />
-            </div>
-            <div>
-              <img
-                className="h-auto max-w-full rounded-lg"
-                src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-10.jpg"
-                alt=""
-              />
-            </div>
-            <div>
-              <img
-                className="h-auto max-w-full rounded-lg"
-                src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-11.jpg"
-                alt=""
-              />
-            </div>
-          </div>
-        </div>
-      </section>
+    useEffect(() => {
+        generateCols();
+    }, []);
 
-      <Footer/>
-    </>
-  );
+    return (
+        <>
+            <Navbar bgColor={'white'} txtColor={'black'} />
+
+            <section className="container relative justify-center mx-auto mt-2 px-4 md:mt-20 lg:mt-24 lg:mb-40 lg:px-[125px]">
+                <div className="">
+                    <h1 className="text-[45px] font-bold">Galeri Ocuwrap</h1>
+                    <p className="text-lg mr-6">Foto produk, testimoni, dan kegiatan dari ocuwrap</p>
+                </div>
+
+                <div className="grid grid-cols-2 mt-8 md:mt-9 lg:mt-10 md:grid-cols-4 gap-4">
+                    <div className="grid gap-4">
+                        {col1.map((image, index) => (
+                            <div key={index}>
+                                <img className="h-auto max-w-full rounded-lg" src={image.url} alt="" />
+                            </div>
+                        ))}
+                    </div>
+
+                    <div className="grid gap-4">
+                        {col2.map((image, index) => (
+                            <div key={index}>
+                                <img className="h-auto max-w-full rounded-lg" src={image.url} alt="" />
+                            </div>
+                        ))}
+                    </div>
+
+                    <div className="grid gap-4">
+                        {col3.map((image, index) => (
+                            <div key={index}>
+                                <img className="h-auto max-w-full rounded-lg" src={image.url} alt="" />
+                            </div>
+                        ))}
+                    </div>
+
+                    <div className="grid gap-4">
+                        {col4.map((image, index) => (
+                            <div key={index}>
+                                <img className="h-auto max-w-full rounded-lg" src={image.url} alt="" />
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            </section>
+
+            <Footer />
+        </>
+    );
 };
 
 export default Gallery;
