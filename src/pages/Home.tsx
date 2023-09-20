@@ -34,7 +34,7 @@ const Home: React.FC = () => {
                                 BE A SOLUTION
                             </h1>
                             <h1 className="text-white font-bold text-base md:text-[30px] md:mt-4 lg:text-[45px] lg:mt-8">
-                                NOT A POLUTION
+                                NOT A POLLUTION
                             </h1>
                             <p className="text-white text-[8px] mt-3 md:text-sm md:mt-8 lg:text-lg lg:mt-14">
                                 Pelopor bubble wrap bigradable ramah lingkungan untuk menggantikan
@@ -51,7 +51,7 @@ const Home: React.FC = () => {
 
                             <a
                                 target="_blank"
-                                href="https://wa.me/6287775049135?text=Saya%20ingin%20membeli%20produk%20anda"
+                                href="https://wa.me/6282245676790?text=Saya%20ingin%20membeli%20produk%20anda"
                             >
                                 <button
                                     className="mt-6 rounded-sm px-2 py-1 bg-primary  text-white text-[8px] font-medium 
@@ -71,7 +71,7 @@ const Home: React.FC = () => {
                                 BE A SOLUTION
                             </h1>
                             <h1 className="text-white font-bold text-base md:text-[30px] md:mt-4 lg:text-[45px] lg:mt-8">
-                                NOT A POLUTION
+                                NOT A POLLUTION
                             </h1>
                             <p className="text-white font text-[8px] mt-3 md:text-sm md:mt-8 lg:text-lg lg:mt-14">
                                 Pelopor bubble wrap bigradable ramah lingkungan untuk menggantikan
@@ -88,7 +88,7 @@ const Home: React.FC = () => {
 
                             <a
                                 target="_blank"
-                                href="https://wa.me/6287775049135?text=Saya%20ingin%20membeli%20produk%20anda"
+                                href="https://wa.me/6282245676790?text=Saya%20ingin%20membeli%20produk%20anda"
                             >
                                 <button
                                     className="mt-6 rounded-sm px-2 py-1 bg-primary  text-white text-[8px] font-medium 
@@ -134,7 +134,7 @@ const Home: React.FC = () => {
 
                         <a
                             target="_blank"
-                            href="https://wa.me/6287775049135?text=Saya%20ingin%20membeli%20produk%20anda"
+                            href="https://wa.me/6282245676790?text=Saya%20ingin%20membeli%20produk%20anda"
                         >
                             <button
                                 className=" bg-primary  text-white text-[8px] font-medium 
@@ -217,7 +217,7 @@ const Home: React.FC = () => {
 
             {/* Galeri */}
 
-            <section className="relative container mx-auto mt-44 md:mb-8 lg:mt-[220px]">
+            <section className="relative container mx-auto mt-44 md:mb-8 lg:mt-[220px] lg:mb-20">
                 <div className="container mx-auto items-center">
                     <h1 className="text-2xl lg:text-[40px] font-bold text-center ">Galeri</h1>
                     <p className="text-sm text-center px-10 md:px-48 mt-4 mb-6">
@@ -231,7 +231,7 @@ const Home: React.FC = () => {
                         spaceBetween={30}
                         className="mySwiper hidden md:block md:mt-8 lg:mt-12 md:px-10 lg:px-32"
                     >
-                        {gallery_path.map((gallery, index) => (
+                        {gallery_path.slice(0, 5).map((gallery, index) => (
                             <SwiperSlide key={index}>
                                 <img src={gallery.url} alt={gallery.name} />
                             </SwiperSlide>
@@ -240,7 +240,7 @@ const Home: React.FC = () => {
 
                     {/* swiper mobile */}
                     <Swiper slidesPerView={1} centeredSlides={true} spaceBetween={30} className="mySwiper md:hidden">
-                        {gallery_path.map((gallery, index) => (
+                        {gallery_path.slice(0, 5).map((gallery, index) => (
                             <SwiperSlide key={index}>
                                 <img src={gallery.url} alt={gallery.name} />
                             </SwiperSlide>
@@ -251,8 +251,8 @@ const Home: React.FC = () => {
 
             {/* Company */}
 
-            <section className="relative bg-halfgreen top-[60px]" id="about">
-                <div className="container mx-auto w-full h-[530px] md:h-[460px] lg:h-[670px] mb-[100px] md:px-10 md:py-20 lg:py-0 md:grid md:grid-cols-2 lg:px-[150px]">
+            <section className="relative bg-halfgreen top-[60px] mb-16 "  id="about">
+                <div className="container mx-auto w-full h-[530px] md:h-[470px] lg:h-[670px] md:mb-[40px] md:px-10 md:py-20 lg:py-0 md:grid md:grid-cols-2 lg:px-[150px]">
                     <div className="flex justify-center items-center mx-auto md:justify-normal md:items-start ">
                         <img
                             className="w-56 mt-14 md:mt-0 md:w-[350px] lg:w-[450px] lg:mt-[125px]"
@@ -272,7 +272,7 @@ const Home: React.FC = () => {
                     </div>
                 </div>
             </section>
-
+                            
             <Footer />
         </>
     );

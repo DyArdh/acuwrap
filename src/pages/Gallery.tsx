@@ -49,7 +49,7 @@ const Gallery: React.FC = () => {
         <>
             <Navbar bgColor={'white'} txtColor={'black'} />
 
-            <section className="container relative justify-center mx-auto mt-2 px-4 md:mt-20 lg:mt-24 lg:mb-40 lg:px-[125px]">
+            <section className="container relative justify-center mx-auto mt-2 px-4 mb-16 md:mt-20 md:mb-24 lg:mt-24 lg:mb-40 lg:px-[125px]">
                 <div className="">
                     <h1 className="text-[45px] font-bold">Galeri Ocuwrap</h1>
                     <p className="text-lg mr-6">Foto produk, testimoni, dan kegiatan dari ocuwrap</p>

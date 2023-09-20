@@ -1,5 +1,5 @@
 /* eslint-disable react-hooks/exhaustive-deps */
-import logo_dummy from '/logo_dummy.svg';
+import logo from '/logo.png';
 import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 
@@ -69,7 +69,7 @@ const Navbar = ({ bgColor, txtColor }: NavbarProps) => {
                 className="hidden md:block md:fixed left-0 top-0 w-full z-10 ease-in duration-300 drop-shadow-nav"
             >
                 <div className="px-2 py-2 md:px-10 md:py-2 lg:max-w-[1280px] lg:px-10 lg:py-2 mx-auto flex justify-between items-center">
-                    <img src={logo_dummy} alt="logo" className="w-16 md:w-20 lg:w-24" />
+                    <img src={logo} alt="logo" className="w-24 md:w-28 lg:w-32" />
 
                     <ul
                         style={{ color: `${textColor}` }}
