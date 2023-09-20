@@ -251,7 +251,7 @@ const Home: React.FC = () => {
 
             {/* Company */}
 
-            <section className="relative bg-halfgreen top-[60px] mb-16 "  id="about">
+            <section className="relative bg-halfgreen top-[60px] mb-16 " id="about">
                 <div className="container mx-auto w-full h-[530px] md:h-[470px] lg:h-[670px] md:mb-[40px] md:px-10 md:py-20 lg:py-0 md:grid md:grid-cols-2 lg:px-[150px]">
                     <div className="flex justify-center items-center mx-auto md:justify-normal md:items-start ">
                         <img
@@ -272,7 +272,7 @@ const Home: React.FC = () => {
                     </div>
                 </div>
             </section>
-                            
+
             <Footer />
         </>
     );
