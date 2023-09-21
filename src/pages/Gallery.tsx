@@ -1,6 +1,5 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import { useEffect, useState } from "react";
-import gambar1 from "/galeri (111).jpg"
 
 
 import Navbar from "../components/Navbar";
