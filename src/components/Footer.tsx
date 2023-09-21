@@ -90,7 +90,7 @@ const Footer: React.FC = () => {
                                 <ul>
                                     <div className="flex items-center text-xl">
                                         <BsFillTelephoneFill className="text-second" />
-                                        <span className="ml-2 text-sm">+62 857 0402 6129</span>
+                                        <span className="ml-2 text-sm">+62 8570 4026 129</span>
                                     </div>
                                     <div className="flex items-center md:mt-4 ">
                                         <IoMdMail className="text-second text-xl" />
@@ -177,7 +177,7 @@ const Footer: React.FC = () => {
                         <h1 className="text-base font-medium mb-4">Kontak</h1>
                         <p className="flex items-center text-sm">
                             <BsFillTelephoneFill className="text-second" />
-                            <span className="ml-2 text-xs">+62 857 0402 6129</span>
+                            <span className="ml-2 text-xs">+62 8570 4026 129</span>
                         </p>
                         <p className="flex items-center mt-2">
                             <IoMdMail className="text-second text-[16px]" />
