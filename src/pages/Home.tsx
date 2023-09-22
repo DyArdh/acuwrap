@@ -51,7 +51,7 @@ const Home: React.FC = () => {
 
                             <a
                                 target="_blank"
-                                href="https://wa.me/6282245676790?text=Saya%20ingin%20membeli%20produk%20anda"
+                                href="https://wa.me/6285704026129?text=Saya%20ingin%20membeli%20produk%20anda"
                             >
                                 <button
                                     className="mt-6 rounded-sm px-2 py-1 bg-primary  text-white text-[8px] font-medium 
@@ -88,7 +88,7 @@ const Home: React.FC = () => {
 
                             <a
                                 target="_blank"
-                                href="https://wa.me/6282245676790?text=Saya%20ingin%20membeli%20produk%20anda"
+                                href="https://wa.me/6285704026129?text=Saya%20ingin%20membeli%20produk%20anda"
                             >
                                 <button
                                     className="mt-6 rounded-sm px-2 py-1 bg-primary  text-white text-[8px] font-medium 
@@ -134,7 +134,7 @@ const Home: React.FC = () => {
 
                         <a
                             target="_blank"
-                            href="https://wa.me/6282245676790?text=Saya%20ingin%20membeli%20produk%20anda"
+                            href="https://wa.me/6285704026129?text=Saya%20ingin%20membeli%20produk%20anda"
                         >
                             <button
                                 className=" bg-primary  text-white text-[8px] font-medium 
